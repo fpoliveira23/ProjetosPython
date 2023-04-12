@@ -1,0 +1,41 @@
+#calculadora
+
+def soma (numero1,numero2):
+    return(numero1+numero2)
+def divide (numero1,numero2):
+    return(numero1/numero2)
+def subtrai(numero1,numero2):
+    return(numero1-numero2)
+def multiplica (numero1,numero2):
+    return(numero1*numero2)
+def menu():
+    resposta=input("""
+    1 - SOMA
+    2 - SUBTRAÇÃO
+    3 - MULTIPLICAÇÃO
+    4 - DIVISÃO
+    5 - SAIR
+    """)
+    return(resposta)
+def entrada_numero():
+    numero=int(input("numero: ")) 
+    return(numero)  
+while True:   
+    resposta=menu()
+    if resposta =="5":
+        break
+    else:
+        numero1=entrada_numero()
+        numero2=entrada_numero()
+        if  resposta =="1":
+            resultado=soma(numero1,numero2)
+            print(resultado)
+        elif resposta =="2":
+            resultado=subtrai(numero1,numero2)
+            print(resultado)
+        elif resposta =="3":
+            resultado=multiplica(numero1,numero2)
+            print(resultado)
+        elif resposta =="4":
+            resultado=divide(numero1,numero2)
+            print(resultado)
